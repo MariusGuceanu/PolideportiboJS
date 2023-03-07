@@ -10,22 +10,27 @@ import javax.swing.JButton;
 public class Principal extends JFrame {
 
 	private JPanel contentPane;
+	
+	private JButton btnUsr;
+	private JButton btnAct;
+	private JButton btnIns;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Principal frame = new Principal();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					Principal frame = new Principal();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
+
 
 	/**
 	 * Create the frame.
@@ -39,17 +44,31 @@ public class Principal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnUsr = new JButton("Gestionar Usuarios");
+		btnUsr = new JButton("Gestionar Usuarios");
 		btnUsr.setBounds(145, 52, 123, 23);
 		contentPane.add(btnUsr);
 		
-		JButton btnAct = new JButton("Gestionar Actividades");
+		btnAct = new JButton("Gestionar Actividades");
 		btnAct.setBounds(145, 86, 137, 23);
 		contentPane.add(btnAct);
 		
-		JButton btnIns = new JButton("Gestionar Inscripciones");
+		btnIns = new JButton("Gestionar Inscripciones");
 		btnIns.setBounds(145, 120, 143, 23);
 		contentPane.add(btnIns);
 	}
+
+
+	public JButton getBtnAct() {
+		return btnAct;
+	}
+
+	public JButton getBtnUsr() {
+		return btnUsr;
+	}
+
+	public JButton getBtnIns() {
+		return btnIns;
+	}
+
 
 }
