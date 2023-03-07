@@ -8,9 +8,10 @@ public class App {
 	public static void main(String[] args) {
 		Principal frmPrincipal = new Principal();
 		
-		ControladorPrincipal principalC = new ControladorPrincipal(frmPrincipal);
-		principalC.inicializar();
+		ControladorPrincipal cp = new ControladorPrincipal(frmPrincipal);
+		cp.inicializar();
 		frmPrincipal.setVisible(true);
+		
 		
 	} 
 }

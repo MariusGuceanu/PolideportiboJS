@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
 
+import modelo.UsuariosModelo;
+import vista.GestorUsuarios;
 import vista.Principal;
 
 public class ControladorPrincipal implements ActionListener {
@@ -13,7 +15,12 @@ public class ControladorPrincipal implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()==frmPrincipal.getBtnUsr()) {
-			JOptionPane.showMessageDialog(null, "Gestor Usuarios");
+			UsuariosModelo us = new UsuariosModelo();
+			vista.GestorUsuarios gu = new GestorUsuarios();
+			
+			ControladorUsuarios cu = new ControladorUsuarios(us, gu);
+			cu.inicializar();
+			gu.setVisible(true);
 		}
 
 		if(e.getSource()==frmPrincipal.getBtnAct()) {
