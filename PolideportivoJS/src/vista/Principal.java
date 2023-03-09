@@ -45,15 +45,15 @@ public class Principal extends JFrame {
 		contentPane.setLayout(null);
 		
 		btnUsr = new JButton("Gestionar Usuarios");
-		btnUsr.setBounds(145, 52, 123, 23);
+		btnUsr.setBounds(145, 52, 180, 23);
 		contentPane.add(btnUsr);
 		
 		btnAct = new JButton("Gestionar Actividades");
-		btnAct.setBounds(145, 86, 137, 23);
+		btnAct.setBounds(145, 86, 180, 23);
 		contentPane.add(btnAct);
 		
 		btnIns = new JButton("Gestionar Inscripciones");
-		btnIns.setBounds(145, 120, 143, 23);
+		btnIns.setBounds(145, 120, 180, 23);
 		contentPane.add(btnIns);
 	}
 

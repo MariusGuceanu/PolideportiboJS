@@ -5,12 +5,18 @@ import vista.GestorUsuarios;
 
 public class ControladorUsuarios {
 
+	private UsuariosModelo us;
+	private vista.GestorUsuarios gu;
+
 	public ControladorUsuarios(UsuariosModelo us, GestorUsuarios gu) {
-		// TODO Auto-generated constructor stub
+		
+		this.us = us;
+		this.gu = gu;
+		
+		
 	}
 
 	public void inicializar() {
-		// TODO Auto-generated method stub
 		
 	}
 
