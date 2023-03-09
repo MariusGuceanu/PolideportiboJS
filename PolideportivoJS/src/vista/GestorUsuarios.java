@@ -11,16 +11,18 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class GestorUsuarios extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
-	private JTable table;
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
 	
 	private DefaultTableModel tableModel;
+	private JTextField textField_3;
 
 	/**
 	 * Launch the application.
@@ -58,17 +60,11 @@ public class GestorUsuarios extends JDialog {
 		btnModificarUsr.setBounds(37, 156, 89, 23);
 		contentPanel.add(btnModificarUsr);
 		
-		table = new JTable();
-		
 		this.tableModel = new DefaultTableModel();
-		table.setModel(tableModel);
 		
 		tableModel.addColumn("No_Ap");
 		tableModel.addColumn("DNI");
 		tableModel.addColumn("Codigo");
-		
-		table.setBounds(267, 36, 157, 156);
-		contentPanel.add(table);
 		
 		textField = new JTextField();
 		textField.setBounds(149, 54, 86, 20);
@@ -96,6 +92,19 @@ public class GestorUsuarios extends JDialog {
 		JLabel lblCodigo = new JLabel("Codigo");
 		lblCodigo.setBounds(176, 160, 59, 14);
 		contentPanel.add(lblCodigo);
+		
+		JButton btnBuscarUsr = new JButton("Buscar por Id");
+		btnBuscarUsr.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnBuscarUsr.setBounds(267, 36, 146, 23);
+		contentPanel.add(btnBuscarUsr);
+		
+		textField_3 = new JTextField();
+		textField_3.setBounds(267, 70, 146, 20);
+		contentPanel.add(textField_3);
+		textField_3.setColumns(10);
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));

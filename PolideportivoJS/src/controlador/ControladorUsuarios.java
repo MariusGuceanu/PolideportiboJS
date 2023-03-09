@@ -18,6 +18,11 @@ public class ControladorUsuarios {
 
 	public void inicializar() {
 		
+		this.gu.setTitle("Usuarios");
+		gu.setLocationRelativeTo(null);
+		gu.setVisible(false);
+		
+		
 	}
 
 	
